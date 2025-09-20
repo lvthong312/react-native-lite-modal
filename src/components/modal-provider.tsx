@@ -178,15 +178,19 @@ export const ModalProvider: React.FC<{ children: React.ReactNode }> = ({
         animationType="none" // tự handle animation
         onRequestClose={options.onRequestClose || closeModal}
       >
-        <TouchableOpacity
+        <Animated.View
           style={[
             styles.overlay,
             getOverlayStyle(),
             { backgroundColor: options.backdropColor || 'rgba(0,0,0,0.5)' },
           ]}
-          activeOpacity={1}
-          onPress={closeModal}
         >
+          {/* Backdrop (outside) */}
+          <TouchableOpacity
+            style={StyleSheet.absoluteFill} // full screen clickable area
+            activeOpacity={1}
+            onPress={closeModal}
+          />
           <Animated.View
             style={[
               styles.modalContainer,
@@ -196,7 +200,7 @@ export const ModalProvider: React.FC<{ children: React.ReactNode }> = ({
           >
             {content}
           </Animated.View>
-        </TouchableOpacity>
+        </Animated.View>
       </Modal>
     </ModalContext.Provider>
   );
