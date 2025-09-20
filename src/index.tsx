@@ -1,3 +1,5 @@
-export function multiply(a: number, b: number): number {
-  return a * b;
-}
+export { useModal, ModalProvider } from './components/modal-provider';
+export {
+  useModalStack,
+  ModalStackProvider,
+} from './components/modal-stack-provider';

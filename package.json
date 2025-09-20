@@ -1,5 +1,5 @@
 {
-  "name": "react-native-fast-modal",
+  "name": "react-native-lite-modal",
   "version": "0.1.0",
   "description": "Support for modal",
   "main": "./lib/module/index.js",
@@ -32,7 +32,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-fast-modal-example",
+    "example": "yarn workspace react-native-lite-modal-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lvthong312/react-native-fast-modal.git"
+    "url": "git+https://github.com/lvthong312/react-native-lite-modal.git"
   },
   "author": "Thong Luong <lvthong312@gmail.com> (https://github.com/lvthong312)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lvthong312/react-native-fast-modal/issues"
+    "url": "https://github.com/lvthong312/react-native-lite-modal/issues"
   },
-  "homepage": "https://github.com/lvthong312/react-native-fast-modal#readme",
+  "homepage": "https://github.com/lvthong312/react-native-lite-modal#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
