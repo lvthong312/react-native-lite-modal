@@ -89,11 +89,13 @@ export const ModalStackProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const closeModal = useCallback(() => {
     setContent((prev: any) => {
-      if (prev?.length <= 1) {
+      if (!prev || prev?.length <= 1) {
         animateOut(() => setVisible(false));
         return [];
       }
-      return prev?.pop();
+      const newContent = [...prev];
+      newContent.pop();
+      return newContent;
     });
   }, [animateOut]);
 
