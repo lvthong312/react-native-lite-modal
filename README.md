@@ -1,5 +1,11 @@
 # react-native-fast-modal
 
+<p align="center">
+  <img src="https://img.shields.io/npm/v/react-native-lite-modal?color=green" alt="npm version" />
+  <img src="https://img.shields.io/npm/dm/react-native-lite-modal" alt="npm downloads" />
+  <img src="https://img.shields.io/badge/react--native-0.70+-blue" alt="react-native" />
+</p>
+
 A lightweight and flexible modal manager for React Native.  
 It supports multiple positions (top, center, bottom), overlay customization, and even modal stacking.
 
@@ -15,9 +21,9 @@ It supports multiple positions (top, center, bottom), overlay customization, and
 ## 📦 Installation
 
 ```bash
-npm install react-native-fast-modal
+npm install react-native-lite-modal
 # or
-yarn add react-native-fast-modal
+yarn add react-native-lite-modal
 
 🚀 Usage
 

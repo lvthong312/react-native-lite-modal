@@ -10,7 +10,7 @@ import {
   ModalStackProvider,
   useModal,
   useModalStack,
-} from 'react-native-lite-modal';
+} from 'react-native-fast-modal';
 
 const HomeScreen = () => {
   const {

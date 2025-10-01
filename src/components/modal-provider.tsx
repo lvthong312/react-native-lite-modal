@@ -23,6 +23,8 @@ type ModalOptions = {
   position?: 'top' | 'center' | 'bottom';
   backdropColor?: string;
   contentStyle?: ViewStyle;
+  contentContainerStyle?: ViewStyle;
+  modalStyle?: ViewStyle;
 };
 
 type ModalContextProps = {
@@ -177,12 +179,14 @@ export const ModalProvider: React.FC<{ children: React.ReactNode }> = ({
         transparent={options.transparent}
         animationType="none" // tự handle animation
         onRequestClose={options.onRequestClose || closeModal}
+        style={options?.modalStyle}
       >
         <Animated.View
           style={[
             styles.overlay,
             getOverlayStyle(),
             { backgroundColor: options.backdropColor || 'rgba(0,0,0,0.5)' },
+            options?.contentContainerStyle,
           ]}
         >
           {/* Backdrop (outside) */}
@@ -194,8 +198,8 @@ export const ModalProvider: React.FC<{ children: React.ReactNode }> = ({
           <Animated.View
             style={[
               styles.modalContainer,
-              options.contentStyle,
               getAnimatedStyle(),
+              options.contentStyle,
             ]}
           >
             {content}
